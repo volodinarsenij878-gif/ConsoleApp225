@@ -1,0 +1,29 @@
+     using System;
+     using System.Collections.Generic;
+     using System.Linq;
+     using System.Text;
+     using System.Threading.Tasks;
+
+     namespace Program66
+     {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Средний балл: ");
+            if (double.TryParse(Console.ReadLine(), out double avg) && avg >= 2.0 && avg <= 5.0)
+            {
+                string result;
+                if (avg < 4.5) result = "Без отличия";
+                else if (avg < 4.75) result = "Претендент на красный диплом";
+                else result = "Красный диплом";
+
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: средний балл от 2 до 5.");
+            }
+        }
+    }
+    }
